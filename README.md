@@ -50,7 +50,7 @@ CertifyFlow is a modern full-stack Internship Certificate Verification System wh
 
 ## 📊 Student Dashboard
 
-![student Dashboard](./screenshots_folder/student-dashboard.png)
+![Student Dashboard](./screenshots_folder/student_dashboard.png)
 
 ## 📂 Admin Login Page
 
