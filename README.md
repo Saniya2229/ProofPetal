@@ -34,35 +34,35 @@ CertifyFlow is a modern full-stack Internship Certificate Verification System wh
 
 ## 🏠Home Page
 
-![Home Page](./screenshots/home.png)
+![Home Page](./screenshots_folder/home.png)
 
 ## 🔐 Feature Page
 
-![Login](./screenshots/features.png)
+![Login](./screenshots_folder/features.png)
 
 ## 📂cerificate Verification Process
 
-![Admin Dashboard](./screenshots/process.png)
+![Admin Dashboard](./screenshots_folder/process.png)
 
 ## 📄Student Login Page
 
-![Certificate Verification](./screenshots/student_login.png)
+![Certificate Verification](./screenshots_folder/student_login.png)
 
 ## 📊 Student Dashboard
 
-![Analytics Dashboard](./screenshots/student-dashboard.png)
+![Analytics Dashboard](./screenshots_folder/student-dashboard.png)
 
 ## 📂 Admin Login Page
 
-![Bulk Upload](./screenshots/admin_login.png)
+![Bulk Upload](./screenshots_folder/admin_login.png)
 
 ## 🛡️ Admin Dashboard
 
-![Fraud Detection](./screenshots/admin_dashboard.png)
+![Fraud Detection](./screenshots_folder/admin_dashboard.png)
 
 ## 📄PDF Certificate Download
 
-![PDF Download](./screenshots/certificate_view.png)
+![PDF Download](./screenshots_folder/certificate_view.png)
 
 ---
 
