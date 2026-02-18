@@ -75,7 +75,7 @@ const StudentDashboard = () => {
                     headers: { Authorization: `Bearer ${token}` },
                     withCredentials: true,
                 };
-                const { data } = await axios.get('http://localhost:5000/api/student/profile', config);
+                const { data } = await axios.get('https://proofpetal.onrender.com/api/student/profile', config);
                 setProfile(data);
             } catch (err) {
                 console.error('Error fetching profile:', err);
@@ -95,7 +95,7 @@ const StudentDashboard = () => {
                     headers: { Authorization: `Bearer ${token}` },
                     withCredentials: true,
                 };
-                const { data } = await axios.get('http://localhost:5000/api/student/certificates', config);
+                const { data } = await axios.get('https://proofpetal.onrender.com/api/student/certificates', config);
                 // API returns { success, certificates: [...], total, active, revoked }
                 setMyCertificates(data.certificates || data);
             } catch (err) {
@@ -123,7 +123,7 @@ const StudentDashboard = () => {
 
         try {
             // First verify the certificate exists
-            const { data } = await axios.get(`http://localhost:5000/api/certificates/${searchId.trim()}`);
+            const { data } = await axios.get(`https://proofpetal.onrender.com/api/certificates/${searchId.trim()}`);
             // If certificate exists, navigate to the beautiful certificate preview page
             if (data) {
                 navigate(`/certificate/${searchId.trim()}`);
@@ -154,7 +154,7 @@ const StudentDashboard = () => {
                 headers: { Authorization: `Bearer ${token}` },
                 withCredentials: true,
             };
-            await axios.post(`http://localhost:5000/api/student/certificates/${certId}/download`, {}, config);
+            await axios.post(`https://proofpetal.onrender.com/api/student/certificates/${certId}/download`, {}, config);
             // Trigger browser print
             window.print();
         } catch (err) {
@@ -202,7 +202,7 @@ const StudentDashboard = () => {
                 withCredentials: true,
             };
             const { data } = await axios.put(
-                'http://localhost:5000/api/student/profile',
+                'https://proofpetal.onrender.com/api/student/profile',
                 { name: editName.trim() },
                 config
             );
