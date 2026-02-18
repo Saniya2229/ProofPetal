@@ -47,7 +47,7 @@ const AdminDashboard = () => {
                     headers: { Authorization: `Bearer ${token}` },
                     withCredentials: true,
                 };
-                const { data } = await axios.get('http://localhost:5000/api/certificates/stats', config);
+                const { data } = await axios.get('https://proofpetal.onrender.com/api/certificates/stats', config);
                 setStats(data);
             } catch (err) {
                 console.error('Error fetching stats:', err);
@@ -67,7 +67,7 @@ const AdminDashboard = () => {
                 headers: { Authorization: `Bearer ${token}` },
                 withCredentials: true,
             };
-            const { data } = await axios.get('http://localhost:5000/api/admin/insights', config);
+            const { data } = await axios.get('https://proofpetal.onrender.com/api/admin/insights', config);
             if (data.success) {
                 setInsights(data.insights || []);
             }
