@@ -61,8 +61,8 @@ const FraudDetection = () => {
             if (filters.severity) params.append('severity', filters.severity);
 
             const [statsRes, alertsRes] = await Promise.all([
-                axios.get('http://localhost:5000/api/fraud/stats', config),
-                axios.get(`http://localhost:5000/api/fraud/alerts?${params.toString()}`, config)
+                axios.get('https://proofpetal.onrender.com/api/fraud/stats', config),
+                axios.get(`https://proofpetal.onrender.com /api/fraud/alerts?${params.toString()}`, config)
             ]);
 
             setStats(statsRes.data.stats);
@@ -80,7 +80,7 @@ const FraudDetection = () => {
         try {
             setResolveLoading(true);
             await axios.put(
-                `http://localhost:5000/api/fraud/alerts/${selectedAlert._id}/resolve`,
+                `https://proofpetal.onrender.com/api/fraud/alerts/${selectedAlert._id}/resolve`,
                 resolveData,
                 config
             );
