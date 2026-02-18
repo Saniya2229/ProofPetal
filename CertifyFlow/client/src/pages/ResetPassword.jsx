@@ -34,7 +34,7 @@ const ResetPassword = () => {
         setIsLoading(true);
 
         try {
-            const { data } = await axios.post(`http://localhost:5000/api/auth/reset-password/${token}`, {
+            const { data } = await axios.post(`https://proofpetal.onrender.com/api/auth/reset-password/${token}`, {
                 password,
                 confirmPassword
             });
