@@ -26,7 +26,7 @@ const CertificatePreview = () => {
     useEffect(() => {
         const fetchCertificate = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:5000/api/certificates/${id}`);
+                const { data } = await axios.get(`https://proofpetal.onrender.com/api/certificates/${id}`);
                 setCertificate(data);
             } catch (err) {
                 setError('Certificate not found');
@@ -45,7 +45,7 @@ const CertificatePreview = () => {
                     headers: { Authorization: `Bearer ${user.token}` },
                     withCredentials: true,
                 };
-                await axios.post(`http://localhost:5000/api/student/certificates/${id}/download`, {}, config);
+                await axios.post(`https://proofpetal.onrender.com/api/student/certificates/${id}/download`, {}, config);
             } catch (err) {
                 console.error('Error tracking download:', err);
             }
