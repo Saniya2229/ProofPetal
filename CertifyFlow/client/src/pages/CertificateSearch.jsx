@@ -36,7 +36,7 @@ const CertificateSearch = () => {
         setShowLoginPrompt(false);
 
         try {
-            const { data } = await axios.get(`http://localhost:5000/api/certificates/${searchId.trim()}`);
+            const { data } = await axios.get(`https://proofpetal.onrender.com/api/certificates/${searchId.trim()}`);
             setCertificate(data);
         } catch (err) {
             setCertificate(null);
