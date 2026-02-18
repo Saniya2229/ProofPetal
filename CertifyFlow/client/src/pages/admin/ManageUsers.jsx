@@ -29,7 +29,7 @@ const ManageUsers = () => {
                 headers: { Authorization: `Bearer ${token}` },
                 withCredentials: true,
             };
-            const { data } = await axios.get('http://localhost:5000/api/admin/users', config);
+            const { data } = await axios.get('https://proofpetal.onrender.com/api/admin/users', config);
             setUsers(data.users);
             setStats(data.stats);
         } catch (err) {
@@ -51,7 +51,7 @@ const ManageUsers = () => {
                 headers: { Authorization: `Bearer ${token}` },
                 withCredentials: true,
             };
-            await axios.post('http://localhost:5000/api/admin/users', newUser, config);
+            await axios.post('https://proofpetal.onrender.com/api/admin/users', newUser, config);
             setSuccess('User created successfully!');
             setNewUser({ name: '', email: '', password: '', role: 'student' });
             setShowCreateModal(false);
@@ -73,7 +73,7 @@ const ManageUsers = () => {
                 headers: { Authorization: `Bearer ${token}` },
                 withCredentials: true,
             };
-            await axios.delete(`http://localhost:5000/api/admin/users/${userId}`, config);
+            await axios.delete(`https://proofpetal.onrender.com/api/admin/users/${userId}`, config);
             setSuccess('User deleted successfully!');
             fetchUsers(); // Refresh list
         } catch (err) {
