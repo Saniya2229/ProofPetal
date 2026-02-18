@@ -20,7 +20,7 @@ const LandingPage = () => {
         setCertificate(null);
 
         try {
-            const { data } = await axios.get(`http://localhost:5000/api/certificates/search/${searchId}`);
+            const { data } = await axios.get(`https://proofpetal.onrender.com/api/certificates/search/${searchId}`);
             setCertificate(data);
             // Scroll to certificate view
             setTimeout(() => {
