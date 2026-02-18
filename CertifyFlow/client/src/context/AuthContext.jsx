@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
                 withCredentials: true,
             };
 
-            const { data } = await axios.post('http://localhost:5000/api/auth/admin-login', { email, password }, config);
+            const { data } = await axios.post('https://proofpetal.onrender.com/api/auth/admin-login', { email, password }, config);
 
             setUser(data);
             localStorage.setItem('userInfo', JSON.stringify(data));
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }) => {
                 withCredentials: true,
             };
 
-            const { data } = await axios.post('http://localhost:5000/api/auth/student-login', { email, password }, config);
+            const { data } = await axios.post('https://proofpetal.onrender.com/api/auth/student-login', { email, password }, config);
 
             setUser(data);
             localStorage.setItem('userInfo', JSON.stringify(data));
@@ -69,11 +69,11 @@ export const AuthProvider = ({ children }) => {
             };
 
             // Use role-specific endpoint if expectedRole is provided
-            let endpoint = 'http://localhost:5000/api/auth/login';
+            let endpoint = 'https://proofpetal.onrender.com/api/auth/login';
             if (expectedRole === 'admin') {
-                endpoint = 'http://localhost:5000/api/auth/admin-login';
+                endpoint = 'https://proofpetal.onrender.com/api/auth/admin-login';
             } else if (expectedRole === 'student') {
-                endpoint = 'http://localhost:5000/api/auth/student-login';
+                endpoint = 'https://proofpetal.onrender.com/api/auth/student-login';
             }
 
             const { data } = await axios.post(endpoint, { email, password, expectedRole }, config);
@@ -97,7 +97,7 @@ export const AuthProvider = ({ children }) => {
                 withCredentials: true,
             };
 
-            const { data } = await axios.post('http://localhost:5000/api/auth/register', { name, email, password, role }, config);
+            const { data } = await axios.post('https://proofpetal.onrender.com/api/auth/register', { name, email, password, role }, config);
 
             setUser(data);
             localStorage.setItem('userInfo', JSON.stringify(data));
@@ -113,7 +113,7 @@ export const AuthProvider = ({ children }) => {
     const logout = () => {
         localStorage.removeItem('userInfo');
         setUser(null);
-        axios.post('http://localhost:5000/api/auth/logout', {}, { withCredentials: true });
+        axios.post('https://proofpetal.onrender.com/api/auth/logout', {}, { withCredentials: true });
     };
 
     // Update user data (for profile updates without re-login)
