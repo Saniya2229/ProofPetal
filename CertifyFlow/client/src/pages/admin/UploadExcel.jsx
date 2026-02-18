@@ -29,7 +29,7 @@ const UploadExcel = () => {
         formData.append('file', file);
 
         try {
-            const { data } = await axios.post('http://localhost:5000/api/certificates/upload', formData, {
+            const { data } = await axios.post('https://proofpetal.onrender.com/api/certificates/upload', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
