@@ -18,7 +18,7 @@ const ForgotPassword = () => {
         setIsLoading(true);
 
         try {
-            const { data } = await axios.post('http://localhost:5000/api/auth/forgot-password', {
+            const { data } = await axios.post('https://proofpetal.onrender.com/api/auth/forgot-password', {
                 email: email.trim().toLowerCase()
             });
 
